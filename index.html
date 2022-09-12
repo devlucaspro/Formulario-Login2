@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Contato</title>
+</head>
+<style>
+    *{margin:0; padding:0; box-sizing:border-box;}
+    body{
+        background-color:#5f7c8a;
+    }
+    form{
+        background-color:white;
+        max-width:500px;
+        width: 70%;
+        padding:20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    form h3{
+        margin: 5px 0px 5px 0px;
+        text-align: center;
+        color: #5f7c8a;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    form input[type=text],
+    form input[type=password]{
+        width:100%;
+        height:45px;
+        border: 1px solid #ccc;
+        padding-left:10px;
+        margin:10px 0;
+    }
+    form input[type=submit]{
+        width: 100%;
+        height: 33px;
+        cursor: pointer;
+        background:#5f7c8a;
+        color: white;
+        letter-spacing: 4px;
+        text-transform:uppercase;
+        border: 0;
+        border-radius:20px;
+        transition: 1s;
+    }
+    form input[type=submit]:hover{
+        background-color:#4a5f6a;
+        font-size: 15px;
+    }
+    form input[type=text]:focus{
+        outline: 0;
+    }
+    form input[type=password]:focus{
+        outline: 0;
+    }
+    form a{
+        text-decoration:none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #5f7c8a;
+        margin:10px 0 0 0;
+        font-size: 15px;
+    }
+    .div-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 20px 0 0 0;
+    }
+    div p{
+        font-weight:700;
+    }
+    .icon{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+    }
+    div img{
+        width: 35px;
+        margin: 20px 25px 3px 25px;
+    }
+    .p-center{
+        text-align: center;
+        margin-top: 12px;
+    }
+    .aa{
+        position: absolute;
+        margin: 0 auto;
+        margin-top: 10px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .div-container p{
+        margin-top: 15px;
+    }
+</style>
+
+<body>
+    <form>
+        <h3>Entrar em Contato</h3>
+        <input id="email" type="text" name="email" placeholder="Seu e-mail...">
+        <input id="password" type="password" name="senha" placeholder="Sua senha...">
+        <input type="submit" name="acao" value="Enviar">
+        <a class="aa" href="#">Esqueceu sua senha?</a>
+        <div class="div-container">
+            <hr class="division" width="37%">
+            <p>ou</p>
+            <hr class="division" width="37%">
+        </div>
+        <p class="p-center">Entre com suas redes sociais</p>
+        <div class="icon">
+            <a href="https://www.facebook.com"><img src="imagens/facebook-free-icon.svg"></a>
+            <a href="https://www.twitter.com"><img src="imagens/twitter-free-icon-font.svg"></a>
+            
+        </div>
+    </form>
+    <script>
+        var email = document.getElementById('email');
+        var password = document.getElementById('password');
+
+        email.addEventListener('focus',()=>{
+            email.style.borderColor = "#4a5f6a";
+        });
+        email.addEventListener('blur',()=>{
+            email.style.borderColor = "#ccc";
+        });
+        password.addEventListener('focus',()=>{
+            password.style.borderColor = "#4a5f6a";
+        });
+        password.addEventListener('blur',()=>{
+            password.style.borderColor = "#ccc";
+        });
+
+    </script>
+</body>
+</html>
